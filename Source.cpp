@@ -1,6 +1,3 @@
-
-
-
 /***********************************************
 * Name: Connor O'Malley
 * Email: omalle66@students.rowan.edu
@@ -13,30 +10,74 @@
 
 using namespace std; 
 
+const  float MI_KM = 1.609;
 const  float PI = 3.14159;
+const  float MI_M = 1609.34;
+const  float MI_CM = 160934;
+const  float MI_MM = 1609340;
 
 int main()
 {
 
-	float radius, area, circumference;
+	float mi, km;
 	
 	//Display purpose of the program
-	cout << " ******************************************"<<endl;
-	cout << " This program takes in radius to compute area of circle" <<endl;
-	cout << " ******************************************\n\n";
+	cout << "*****************************************************************************"<<endl;
+	cout << "This program his program converts distance in miles to distance in kilometers" <<endl;
+	cout << "*****************************************************************************\n\n";
+	
+	//Get user input
+	cout << "Please input distance in miles: ";
+	cin >> mi;
+	
+	//Compute km to miles * MilesToKilometers constant
+	km = mi* MI_KM; 
+	
+	//Display the distance in kilometers
+	cout << "\nThe distance in kilometers is = " << km << "\n\n";
+
+	system("pause");
+	
+	float radius, circumference;
+	
+	//Display purpose of the program
+	cout << "***************************************************************"<<endl;
+	cout << "This program takes in radius to compute circumference of circle" <<endl;
+	cout << "***************************************************************\n\n";
 	
 	//Get user input
 	cout << "Please input radius: ";
 	cin >> radius;
 	
-	//Compute area to PI*radius*radius
-	area = PI* radius *radius; 
+	//Compute circumference by 2*pi*radius
+	circumference = 2 * PI * radius; 
 	
-	//Display the area 
-	cout << " The area is = " << area << "\n\n";
-	cout << "Program has ended"<<endl;
+	//Display the circumference 
+	cout << "The circumference is = " << circumference << "\n\n";
 
 	system("pause");
+	
+	float m, cm, mm;
+	
+	//Display purpose of the program
+	cout << "******************************************************************************************************"<<endl;
+	cout << "This program his program converts distance in miles to distance in meters, centimeters and millimeters" <<endl;
+	cout << "******************************************************************************************************\n\n";
+	
+	//Get user input
+	cout << "Please input distance in miles: ";
+	cin >> mi;
+	
+	//Multiply miles by given conversion factors to get meters, centimeters and millimeters
+	m = mi * MI_M;
+	cm = mi * MI_CM;
+	mm = mi * MI_MM;
+	
+	//Display the distance in meters, centimeters and millimeters
+	cout << "\nThe distance is = " << m << " meters, " << cm << " centimeters, " << mm << " millimeters \n\n";
+
+	system("pause");
+	cout << "Program has ended \n\n";
 	
 	return 0;
 }
